@@ -18,7 +18,7 @@ class _CompleteFormState extends State<FormC> {
   @override
   void initState() {
     super.initState();
-    country = _allCountries.first; // Inicializa con el primer país
+    country = _allCountries.first;
   }
 
   void _onChanged(dynamic val) => debugPrint(val.toString());
@@ -111,8 +111,7 @@ class _CompleteFormState extends State<FormC> {
           ),
         ),
       ),
-      
-      // FloatingActionButton para enviar el formulario
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           if (_formKey.currentState?.saveAndValidate() ?? false) {
@@ -127,13 +126,12 @@ class _CompleteFormState extends State<FormC> {
                     Text(
                         'Lenguaje elegido: ${formValues['languages_choice'] ?? 'No seleccionado'}'),
                     Text(
-                        'Nombre completo: ${formValues['full_name'] ?? 'No especificado'}'),
-                    Text(
-                        'País: ${formValues['country'] ?? 'No seleccionado'}'),
-                    Text(
-                        'Mejor lenguaje: ${formValues['best_language'] ?? 'No seleccionado'}'),
-                    Text(
                         'Términos aceptados: ${formValues['accept_terms_switch'] ?? false}'),
+                    Text(
+                        'Nombre completo: ${formValues['full_name'] ?? 'No especificado'}'),
+                    Text('País: ${formValues['country'] ?? 'No seleccionado'}'),
+                    Text(
+                        'Mejor lenguaje: ${formValues['best_language'] ?? 'No seleccionado'}')
                   ],
                 ),
                 actions: [

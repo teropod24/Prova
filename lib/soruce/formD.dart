@@ -54,7 +54,6 @@ class _RelatedFieldsState extends State<FormD> {
                 });
               },
             ),
-            // Aquí, envolvemos la lista filtrada con un Expanded y SingleChildScrollView
             if (filteredCountries.isNotEmpty)
               Expanded(
                 child: SingleChildScrollView(

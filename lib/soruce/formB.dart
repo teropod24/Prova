@@ -26,9 +26,9 @@ class _RelatedFieldsState extends State<FormB> {
 
   Widget _buildProgressIndicator() {
     final List<IconData> stepIcons = [
-      Icons.person, // Icono para "Personal"
-      Icons.contact_mail, // Icono para "Contact"
-      Icons.cloud_upload, // Icono para "Upload"
+      Icons.person,
+      Icons.contact_mail,
+      Icons.cloud_upload,
     ];
 
     final List<String> stepLabels = ['Pers.', 'Contact', 'Upload'];
@@ -60,7 +60,7 @@ class _RelatedFieldsState extends State<FormB> {
   Widget _buildCancelButton(BuildContext context) {
     return TextButton(
       onPressed: () {
-        Navigator.of(context).pop(); // Regresa a la pantalla anterior
+        Navigator.of(context).pop();
       },
       child: const Text('Cancelar'),
     );
@@ -81,7 +81,6 @@ class _RelatedFieldsState extends State<FormB> {
                 controller: _pageController,
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
-                  // Paso 1: Personal
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -93,10 +92,9 @@ class _RelatedFieldsState extends State<FormB> {
                         onPressed: () => _goToStep(1),
                         child: const Text('Continue'),
                       ),
-                      _buildCancelButton(context), // Botón de cancelar
+                      _buildCancelButton(context),
                     ],
                   ),
-                  // Paso 2: Contact
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -108,10 +106,9 @@ class _RelatedFieldsState extends State<FormB> {
                         onPressed: () => _goToStep(2),
                         child: const Text('Continue'),
                       ),
-                      _buildCancelButton(context), // Botón de cancelar
+                      _buildCancelButton(context),
                     ],
                   ),
-                  // Paso 3: Upload
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

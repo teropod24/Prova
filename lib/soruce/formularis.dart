@@ -55,7 +55,6 @@ class _MyCustomFormState extends State<MyCustomForm> {
                           builder: (context) {
                             return SimpleDialog(
                               title: const Text('SimpleDialog'),
-                              //Controladores/es lo que hay dentro de un contenedor del flutter donde aqui puede ser una imagen
                               children: [
                                 SimpleDialogOption(
                                   child: Text(myController.text),
